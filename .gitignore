@@ -1,0 +1,10 @@
+.env
+.envrc
+target/
+*.jar
+.vscode
+.classpath
+.factorypath
+.project
+.settings
+*.swp

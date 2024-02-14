@@ -1,0 +1,8 @@
+spring.security.oauth2:
+  client:
+    provider:
+      diod:
+        issuer-uri: https://gitlab.com
+    registration:
+      diod:
+        client-id: id

@@ -1,0 +1,27 @@
+spring.security.oauth2:
+  client:
+    provider:
+      diod:
+        issuer-uri: https://gitlab1.com
+      dfy:
+        issuer-uri: https://gitlab2.com
+    registration:
+      diod:
+        client-name: GitLab.Tech - DIOD
+        client-id: ${DIOD_OIDC_ID}
+        client-secret: ${DIOD_OIDC_SECRET}
+        scope: [openid]
+        redirect-uri: ${EXTERNAL_URL}/login/oauth2/code/diod
+      dfy:
+        client-name: GitLab.SI - DFY
+        client-id: ${DFY_OIDC_ID}
+        client-secret: ${DFY_OIDC_SECRET}
+        scope: [openid]
+        redirect-uri: ${EXTERNAL_URL}/login/oauth2/code/dfy
+
+oidc:
+  issuer-uri: ${EXTERNAL_URL:http://localhost}
+  client-id: dt
+  redirect-uri: ${API_BASE_URL}/static/oidc-callback.html
+
+server.servlet.session.timeout: 30s

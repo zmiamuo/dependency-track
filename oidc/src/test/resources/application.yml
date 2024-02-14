@@ -1,0 +1,13 @@
+spring.security.oauth2:
+  client:
+    provider:
+      diod:
+        issuer-uri: https://gitlab.com
+    registration:
+      diod:
+        client-id: id
+
+oidc:
+  issuer-uri: http://localhost
+  client-id: dt
+  redirect-uri: http://localhost/static/oidc-callback.html
